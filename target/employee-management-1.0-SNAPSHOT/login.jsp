@@ -28,22 +28,22 @@
 </head>
 
 <body>
-<div>
-    <div class = "page">
-        <div class = "top-form">
-            <p>Sign in</p>
-        </div>
-        <div class = "form">
-            <form type = "post"  action="login" method="post">
-                <input id="username"  type = "text" placeholder="email@abcdf.abc">
-                <p class="error">Username is too small!</p>
-                <input id="password" type = "password" placeholder="password">
-                <p class="error">Invalid password!</p>
-                <button>Login</button>
-            </form>
-            <p class ="message">Not registred? <a href="register.html">Create an account</a> </p>
+    <div>
+        <div class="page">
+            <div class="top-form">
+                <p>Sign in</p>
+            </div>
+            <div class="form">
+                <form type="post" action="login" method="post">
+                    <input id="username" type="text" placeholder="email@abcdf.abc">
+                    <p class="error">Username is too small!</p>
+                    <input id="password" type="password" placeholder="password">
+                    <p class="error">Invalid password!</p>
+                    <button>Login</button>
+                </form>
+                <p class="message">Not registred? <a href="register.jsp">Create an account</a></p>
+            </div>
         </div>
     </div>
-</div>
 </body>
 </html>
