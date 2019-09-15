@@ -14,7 +14,7 @@ public class Main {
         Employee employee = new Employee();
         employee.setName("Cosmin C");
           EmployeeDao employeeDao = new EmployeeDao();
-//          Employee employee = employeeDao.getEntityById(Employee.class, 1L);
+//        Employee employee = employeeDao.getEntityById(Employee.class, 1L);
         System.out.println(employee.getName());
         employeeDao.createEntity(employee);
     }
