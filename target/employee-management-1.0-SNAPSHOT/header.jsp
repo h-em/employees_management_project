@@ -11,15 +11,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="${pageContext.request.contextPath}">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 </head>
 <body>
 
 <div class="header" id="header">
     <a href="#default" class="logo"><img src="/images/logo.png"/></a>
-    <center>
+    <div class ="top-header">
+        <p>
         <% User currentUser = (User) session.getAttribute("currentSessionUser");%>
         Welcome <%= currentUser.getUsername() %>
-    </center>
+        </p>
+    </div>
     <div class="header-right">
         <a class="active" href="#home">Home</a>
         <a href="employees.jsp">Employees</a>

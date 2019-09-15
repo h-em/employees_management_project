@@ -32,9 +32,9 @@ public class Main {
         //employeeDao.createEntity(employee2);
         //employeeDao.createEntity(employee3);
 
-        EmployeeService employeeService = new EmployeeService();
 
-         List<Employee> employeeList = employeeService.getEmployeesList();
+        EmployeeService employeeService = new EmployeeService();
+        List<Employee> employeeList = employeeService.getEmployeesList();
 
         for (Employee e:employeeList) {
             System.out.println(e.getId() + " " + e.getName());

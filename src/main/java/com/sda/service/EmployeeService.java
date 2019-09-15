@@ -2,14 +2,9 @@ package com.sda.service;
 
 import com.sda.dao.EmployeeDao;
 import com.sda.model.Employee;
-import com.sda.util.HibernateUtil;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-import org.hibernate.query.Query;
 
-import javax.persistence.EntityManager;
-import java.util.ArrayList;
 import java.util.List;
+
 
 public class EmployeeService {
 
@@ -20,18 +15,11 @@ public class EmployeeService {
     }
 
     public List<Employee> getEmployeesList(){
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction transaction = session.beginTransaction();
-        List<Employee> elementsList = new ArrayList<>();
-        try {
-            String sql = "from Employee";
-            Query query = session.createQuery(sql, Employee.class);
-            elementsList = query.list();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        transaction.commit();
-        session.close();
-        return elementsList;
+        return employeeDao.getEmployeesList();
+    }
+
+
+    public void saveEmployees(Employee employee){
+        employeeDao.createEntity(employee);
     }
 }

@@ -98,13 +98,16 @@ body{
 
 }
 
-.form button{
+.form button, .customButton a, .customButton{
     background: #4CAF50;
     text-transform: uppercase;
     width: 100%;
     border: 0;
     padding: 10px;
     color: white;
+}
+a .customButton{
+    text-decoration: none;
 }
 
 .form .message{
@@ -129,7 +132,6 @@ body{
 }
 
 .top-form p{
-    vertical-align: middle;
     margin: auto;
 }
 
@@ -147,5 +149,16 @@ p.error{
 
 input.error + p.error{
     display: block;
+}
+
+.top-header p{
+    text-align: center;
+    background: red;
+    margin:0;
+    padding:0;
+}
+
+.top-form-addEmployee{
+    height: 30px;
 }
 

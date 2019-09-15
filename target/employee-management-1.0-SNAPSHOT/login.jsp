@@ -35,9 +35,9 @@
             </div>
             <div class="form">
                 <form type="post" action="login" method="post">
-                    <input id="username" type="text" placeholder="email@abcdf.abc">
+                    <input id="username" name ="un" type="text" placeholder="email@abcdf.abc">
                     <p class="error">Username is too small!</p>
-                    <input id="password" type="password" placeholder="password">
+                    <input id="password" name ="pw" type="password" placeholder="password">
                     <p class="error">Invalid password!</p>
                     <button>Login</button>
                 </form>

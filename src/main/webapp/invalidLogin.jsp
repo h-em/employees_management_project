@@ -16,7 +16,7 @@
           content="text/html; charset=windows-1256">
     <title>Invalid Login</title>
 </head>
-
+    <jsp:include page="header.jsp"/>
 <body>
 <center>
     Sorry, you are not a registered user! Please sign up first

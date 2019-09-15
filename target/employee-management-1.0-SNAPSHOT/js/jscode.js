@@ -13,24 +13,19 @@ $(document).ready(function(){
         }
     });
 
-
     $("#confirmpassword").focusout(validateConfirmPassword);
     $("#email").focusout(registerEmailValidation);
-
-
 });
 
 function loginUseNameValidation(){
     var username = $("#username");
     var text = $(username).val();
     if(text.length < 4){
-        //adaug clasa error pe username
         $(username).addClass("error");
         return false;
     }else{
         $(username).removeClass("error");
         return true;
-        // $("#username").next("p").hide();
     }
 }
 
