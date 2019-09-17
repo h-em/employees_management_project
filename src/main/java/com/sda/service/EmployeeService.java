@@ -18,8 +18,13 @@ public class EmployeeService {
         return employeeDao.getEmployeesList();
     }
 
+    public Employee createEmplyee(String employeeName, String departmentName){
+        return employeeDao.createEmployee(employeeName,departmentName);
+    }
 
     public void saveEmployees(Employee employee){
         employeeDao.createEntity(employee);
     }
+
+
 }

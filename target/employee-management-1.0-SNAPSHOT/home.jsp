@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-         pageEncoding="ISO-8859-1"%>
+         pageEncoding="ISO-8859-1" %>
 
 <html>
 <head>
@@ -15,6 +15,8 @@
 <jsp:include page="header.jsp"/>
 
 <body>
-<h1>This is the home page!</h1>
+    <div class="wraper">
+        <h1>This is the home page!</h1>
+    </div>
 </body>
 </html>

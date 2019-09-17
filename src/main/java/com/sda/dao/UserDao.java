@@ -1,6 +1,7 @@
 package com.sda.dao;
 
 import com.sda.model.User;
+import com.sda.service.UserService;
 import com.sda.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

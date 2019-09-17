@@ -18,9 +18,9 @@
 </head>
     <jsp:include page="header.jsp"/>
 <body>
-<center>
-    Sorry, you are not a registered user! Please sign up first
-</center>
+    <div class="wraper">
+        <p>Sorry, you are not a registered user! Please sign up first.</p>
+    </div>
 </body>
 
 </html>

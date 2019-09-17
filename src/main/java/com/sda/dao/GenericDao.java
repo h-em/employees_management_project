@@ -4,6 +4,11 @@ package com.sda.dao;
 import com.sda.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.NativeQuery;
+
+import javax.management.Query;
+import java.sql.PreparedStatement;
+import java.util.List;
 
 public class GenericDao<T> {
 

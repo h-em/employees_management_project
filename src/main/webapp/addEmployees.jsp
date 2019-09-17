@@ -13,21 +13,42 @@
 <jsp:include page="header.jsp"/>
 
 <body>
-    <div>
-        <div class="page">
-            <div class="top-form top-form-addEmployee">
-                <p>Add new Employee</p>
-            </div>
-            <div class="form">
-                <form type="post" action="addEmployees" method="post">
-                    <input id="username" name = "un" type="text" placeholder="Employee Name">
+<div>
+    <div class="page">
+        <div class="top-form top-form-addEmployee">
+            <p>Add new Employee</p>
+        </div>
+
+        <div class="form extra-padding">
+            <form type="post" action="addEmployees" method="post">
+                <div>
+                    <input id="username" name="username" type="text" placeholder="Employee Name">
                     <p class="error">Username is too small!</p>
-                    <input id="department" name = "dn" type="text" placeholder="Departmet Name">
-                    <p class="error">Invalid department!</p>
-                    <button>Add</button>
-                </form>
-            </div>
+                </div>
+
+                <div>
+                    <select class="select">
+                        <option value="" selected="selected" disabled="disabled">Select an department:</option>
+                        <option value="sales" name="department">Sales</option>
+                        <option value="hr" name="department">Hr</option>
+                        <option value="it" name="department">It</option>
+                        <option value="research" name="research">Research</option>
+                    </select>
+                </div>
+
+                <div class ="add-employee-button">
+                    <button class="button">Add Employee</button>
+                </div >
+                <div class="cancel-button">
+                    <button class="button extra-padding">
+                        <a href="employees.jsp" >Cancel</a>
+                    </button>
+                </div>
+
+            </form>
+
         </div>
     </div>
+</div>
 </body>
 </html>

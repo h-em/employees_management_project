@@ -21,17 +21,31 @@
 <jsp:include page="header.jsp"/>
 
 <body>
-<h1>Employees page!</h1>
-    <div>
-        <c:forEach items="${employeeService.employeesList}" var="employee">
-            <span> <c:out value="${employee.getId()}"/>
-                  <c:out value="${employee.getName()}"/>
-                  <c:out value="${employee.department.name}"/>
-               </span>
-            <br>
-        </c:forEach>
+    <div class="wraper">
 
-        <a class = "customButton" href="addEmployees.jsp">Add New Employee</a>
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+            </tr>
+            <c:forEach items="${employeeService.employeesList}" var="employee">
+                <tr>
+                    <td>${employee.getId()}</td>
+                    <td>${employee.getName()}</td>
+                    <td>${employee.department.name}</td>
+                </tr>
+            </c:forEach>
+        </table>
+
+        <button class="button customButton">
+            <a href="addEmployees.jsp">Add New Employee</a>
+        </button>
+        <button class="button customButton">
+            <a href="addEmployees.jsp">Update Employee</a>
+        </button><button class="button customButton">
+        <a href="addEmployees.jsp">Delete Employee</a>
+    </button>
     </div>
 
 </body>

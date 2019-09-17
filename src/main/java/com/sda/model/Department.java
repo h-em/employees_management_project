@@ -1,5 +1,7 @@
 package com.sda.model;
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -17,7 +19,7 @@ public class Department {
 
     private String name;
 
-    @OneToMany(mappedBy = "department")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "department", orphanRemoval = true)
     private List<Employee> employeeList;
 
     public Long getId() {

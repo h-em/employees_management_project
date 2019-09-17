@@ -10,27 +10,29 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="${pageContext.request.contextPath}">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-
+    <link href="css/style.css" rel="stylesheet" type="text/css">'
+    <script src="https://kit.fontawesome.com/1429dcb656.js"></script>
     <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 </head>
 <body>
 
 <div class="header" id="header">
-    <a href="#default" class="logo"><img src="/images/logo.png"/></a>
+
+
     <div class ="top-header">
         <p>
         <% User currentUser = (User) session.getAttribute("currentSessionUser");%>
         Welcome <%= currentUser.getUsername() %>
         </p>
     </div>
-    <div class="header-right">
-        <a class="active" href="#home">Home</a>
-        <a href="employees.jsp">Employees</a>
-        <a href="#departments">Departments</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+
+    <div class="navbar">
+        <a class="active" href="home.jsp"><i class="fa fa-fw fa-home"></i>Home</a>
+        <a href="employees.jsp"><i class="fas fa-users"></i> Employees</a>
+        <a href="#departments"><i class="fas fa-building"></i> Departments</a>
+        <a href="#contact"><i class="fas fa-id-card"></i></i> Contact</a>
+        <a href="#about"><i class="fas fa-info"></i></i> About</a>
     </div>
 
 </div>
