@@ -27,12 +27,12 @@
                 </div>
 
                 <div>
-                    <select class="select">
+                    <select class="select" name="department">
                         <option value="" selected="selected" disabled="disabled">Select an department:</option>
-                        <option value="sales" name="department">Sales</option>
-                        <option value="hr" name="department">Hr</option>
-                        <option value="it" name="department">It</option>
-                        <option value="research" name="research">Research</option>
+                        <option value="sales">Sales</option>
+                        <option value="hr">Hr</option>
+                        <option value="it">It</option>
+                        <option value="research">Research</option>
                     </select>
                 </div>
 

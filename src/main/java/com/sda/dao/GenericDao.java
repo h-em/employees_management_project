@@ -32,6 +32,20 @@ public class GenericDao<T> {
         return entity;
     }
 
+
+    public T getEntityByName(Class<T> cls,String name) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+
+        T entity = session.get(cls, name);
+        transaction.commit();
+        //session.close();
+        if(entity != null){
+            return entity;
+        }
+        return null;
+    }
+
     public T updateEntity(T entity) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();

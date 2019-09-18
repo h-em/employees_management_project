@@ -31,16 +31,4 @@ public class EmployeeDao extends GenericDao<Employee>{
         return elementsList;
     }
 
-    public Employee createEmployee(String name, String departmentName){
-        Department department = new Department();
-        department.setName(departmentName);
-
-        Employee employee = new Employee();
-        employee.setName(name);
-        employee.setDepartment(department);
-
-        return employee;
-    }
-
-
 }

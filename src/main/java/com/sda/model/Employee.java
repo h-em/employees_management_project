@@ -14,7 +14,7 @@ public class Employee {
     @Column(name = "name", length = 40)
     private String name;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne()
     @JoinColumn(name = "department_id")
     private Department department;
 
