@@ -1,13 +1,10 @@
 package com.sda.dao;
 
 import com.sda.model.Department;
-import com.sda.model.Employee;
 import com.sda.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
-
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -38,4 +35,5 @@ public class DepartmentDao extends GenericDao<Department> {
         }
         return null;
     }
+
 }

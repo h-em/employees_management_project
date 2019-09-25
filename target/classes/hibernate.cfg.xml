@@ -12,6 +12,5 @@
         <mapping class="com.sda.model.User"/>
         <mapping class="com.sda.model.Employee"/>
         <mapping class="com.sda.model.Department"/>
-
     </session-factory>
 </hibernate-configuration>

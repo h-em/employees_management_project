@@ -48,5 +48,10 @@ public class Main {
 
         System.out.println(department.getId() + " " +department.getName() );
 
+
+
+
+        //employeeService.deleteEmployee(employeeList.get(3));
+
     }
 }

@@ -38,13 +38,13 @@
 
                 <div class ="add-employee-button">
                     <button class="button">Add Employee</button>
-                </div >
+                </div>
+
                 <div class="cancel-button">
-                    <button class="button extra-padding">
+                    <button  id="disabled" class="button extra-padding">
                         <a href="employees.jsp" >Cancel</a>
                     </button>
                 </div>
-
             </form>
 
         </div>

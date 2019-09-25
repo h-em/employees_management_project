@@ -6,9 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-         pageEncoding="ISO-8859-1"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+         pageEncoding="ISO-8859-1" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <jsp:useBean id="employeeService" class="com.sda.service.EmployeeService"></jsp:useBean>
 <jsp:useBean id="userService" class="com.sda.service.UserService"></jsp:useBean>
 <jsp:useBean id="employeesDAO" class="com.sda.dao.EmployeeDao"></jsp:useBean>
@@ -21,32 +21,40 @@
 <jsp:include page="header.jsp"/>
 
 <body>
-    <div class="wraper">
+<div class="wraper">
 
-        <table class="table">
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Action</th>
+        </tr>
+        <c:forEach items="${employeeService.employeesList}" var="employee" varStatus="loop" >
             <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Department</th>
-            </tr>
-            <c:forEach items="${employeeService.employeesList}" var="employee">
-                <tr>
-                    <td>${employee.getId()}</td>
-                    <td>${employee.getName()}</td>
-                    <td>${employee.department.name}</td>
-                </tr>
-            </c:forEach>
-        </table>
+                <td>${loop.count}</td>
+                <td>${employee.getName()}</td>
+                <td>${employee.department.name}</td>
 
-        <button class="button customButton">
-            <a href="addEmployees.jsp">Add New Employee</a>
-        </button>
-        <button class="button customButton">
-            <a href="addEmployees.jsp">Update Employee</a>
-        </button><button class="button customButton">
-        <a href="addEmployees.jsp">Delete Employee</a>
+                <td>
+                    <span>
+                        <a href="deleteEmployee?action=deleteEmployee&id=${employee.getId()}"
+                            class="fas fa-minus-circle" ></a>
+                    </span>
+
+                    <span>
+                        <a href="updateEmployee?action=updateEmployee&id=${employee.getId()}"
+                           class="fas fa-edit"></a>
+                    </span>
+                </td>
+            </tr>
+        </c:forEach>
+    </table>
+
+    <button class="button customButton">
+        <a href="addEmployees.jsp">Add New Employee</a>
     </button>
-    </div>
+</div>
 
 </body>
 </html>

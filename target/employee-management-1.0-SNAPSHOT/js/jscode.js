@@ -1,4 +1,7 @@
 
+document.getElementById("disabled").disabled = true;
+
+
 $(document).ready(function(){
     //se apeleaza dupa incarcarea completa a paginii
     
