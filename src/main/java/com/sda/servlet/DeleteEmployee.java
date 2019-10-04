@@ -21,7 +21,7 @@ public class DeleteEmployee extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         Employee employee = employeeService.findById(
-                Long.parseLong(request.getParameter("employeeId")));
+                Long.parseLong(request.getParameter("id")));
 
         System.out.println(request.getParameter("employeeId"));
         try {

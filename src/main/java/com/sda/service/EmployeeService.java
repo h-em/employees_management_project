@@ -22,7 +22,6 @@ public class EmployeeService {
     }
 
     public Employee createEmplyee(String employeeName, String departmentName) {
-        //System.out.println("---------------------->>"+ departmentName);
         Employee employee = null;
         if (employeeName != null && departmentName != null) {
             employee = new Employee();
@@ -37,19 +36,8 @@ public class EmployeeService {
         employeeDao.createEntity(employee);
     }
 
-
     public boolean deleteEmployee(Employee employee) {
         return employeeDao.deleteEntity(employee.getId());
-    }
-
-
-    public boolean updateEmployee(Employee employee) {
-        boolean updated = false;
-        Employee entity = employeeDao.updateEntity(employee);
-        if (employee != null) {
-            updated = true;
-        }
-        return updated;
     }
 
     public void editEmployee(String id, String name, String departmentName) {

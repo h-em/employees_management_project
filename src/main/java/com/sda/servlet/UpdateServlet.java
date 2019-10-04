@@ -17,16 +17,10 @@ public class UpdateServlet extends HttpServlet {
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) {
-
-
         EmployeeService employeeService = new EmployeeService();
         String employeeId = request.getParameter("id");
-            System.out.println(employeeId);
         String name = request.getParameter("username");
-            System.out.println(name);
         String departmentName = request.getParameter("department");
-            System.out.println(departmentName);
-
         employeeService.editEmployee(employeeId,name,departmentName);
         try {
             response.sendRedirect("employees.jsp"); //logged-in page

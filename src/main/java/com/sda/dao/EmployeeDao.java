@@ -69,12 +69,9 @@ public class EmployeeDao extends GenericDao<Employee>{
             Query query = session.createQuery(sql);
             query.setParameter("name",name);
             query.setParameter("department",department);
-            System.out.println("------------>" +id);
-            //if(id.length()>0) {
             Long employeeId = Long.parseLong(id);
             query.setParameter("id", employeeId);
             query.executeUpdate();
-            //}
         } catch (Exception e) {
             e.printStackTrace();
         }

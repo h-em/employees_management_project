@@ -22,9 +22,7 @@ public class UpdateEmployee extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         String employeeId = request.getParameter("id");
-        System.out.println(employeeId + "  IN SERVLET");
         Employee employee = employeeService.findById(Long.parseLong(employeeId));
-        // System.out.println(employee);
         request.setAttribute("employee", employee);
         RequestDispatcher rd = request.getRequestDispatcher("updateEmployee.jsp");
         try {

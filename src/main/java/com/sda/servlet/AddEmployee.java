@@ -27,8 +27,8 @@ public class AddEmployee extends HttpServlet {
                 employeeService.saveEmployees(employee);
                 response.sendRedirect("employees.jsp");
             } else {
-
-            }response.sendRedirect("invalidEmployee.jsp");
+                response.sendRedirect("invalidEmployee.jsp");
+            }
         } catch (Throwable ex) {
             System.out.println(ex);
         }
